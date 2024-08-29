@@ -1,0 +1,103 @@
+@import '../../assets/scss/main';
+
+.container {
+  background-color: $white;
+  color: $black;
+  width: 250px;
+  height: 360px;
+  padding: 15px;
+  padding-top: 20px;
+
+  border-radius: 10px;
+}
+
+.top {
+  display: flex;
+  justify-content: left;
+  align-items: top;
+  padding: 0px;
+}
+
+.user_info {
+  padding-left: 12px;
+  display: flex;
+  width: 55%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0px;
+  h4 {
+    font-size: 1rem;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 500;
+  }
+
+  p {
+    & {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .star_icon {
+      font-size: 0.7rem;
+      color: $dark-minor;
+    }
+
+    .rating {
+      margin-left: 2px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.tag_container {
+  margin-top: 12px;
+  display: flex;
+  justify-content: left;
+  div {
+    margin-right: 5px;
+  }
+}
+
+.mid {
+  h4 {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.8rem;
+    text-align: left;
+    margin-bottom: 18px;
+  }
+
+  .price_container {
+    background-color: $minor;
+    height: 55px;
+    border-radius: 6px;
+    padding: 2px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price {
+    font-weight: 700;
+  }
+}
+
+.bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.state {
+  @include tag-border(0.5em, 1em, $black);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: $primary-color;
+}

@@ -1,0 +1,20 @@
+@import '../../assets/scss/main';
+
+.faq {
+  margin-top: 10px;
+  width: 60%;
+  background-color: $minor;
+  border-top-left-radius: 100px;
+  background-color: aqua;
+  .faqsummary {
+    border-radius: 100px !important;
+  }
+  .faqsummary::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  .faqdetails {
+    background-color: aqua;
+  }
+}

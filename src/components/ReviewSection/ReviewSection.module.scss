@@ -1,0 +1,14 @@
+@import '../../assets/scss/main';
+
+.reviewSection {
+  background-color: darkslategrey;
+  width: 100%;
+  height: 500px;
+
+  .bottom {
+    display: flex;
+    background-color: palevioletred;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

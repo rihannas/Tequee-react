@@ -1,0 +1,59 @@
+@import '../../assets/scss/main';
+
+.profileSnipt {
+  width: 80%;
+  border: 1px solid $dark-minor;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 10px 8px;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+
+    .profileInfo,
+    .buttons {
+      display: flex;
+      align-items: center;
+      width: 30%;
+
+      .username {
+        margin-left: 10px;
+        font-weight: 600;
+        transition: 2ms ease-in;
+      }
+      .username:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .button {
+      display: flex;
+      width: 35%;
+      align-items: center;
+      .followBtn {
+        width: 100%;
+        font-size: 12px;
+        padding: 4px 5px;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-around;
+    div span {
+      margin-left: 6px;
+      text-wrap: nowrap;
+    }
+  }
+}
+
+.lineBreak {
+  border: 1px solid $minor;
+  margin-top: 4px;
+  margin-bottom: 15px;
+}

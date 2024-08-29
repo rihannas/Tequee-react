@@ -1,0 +1,12 @@
+@import '../../assets/scss/main';
+
+.btn {
+  background-color: $primary-color;
+  border: none;
+  width: 80%;
+  min-width: fit-content;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  padding: 10px 12px;
+  font-weight: 500;
+}

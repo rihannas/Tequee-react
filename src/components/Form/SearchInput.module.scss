@@ -1,0 +1,32 @@
+@import '../../assets/scss/main';
+
+.searchInput_container {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  border: 1px solid $black;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+  justify-content: space-between;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  outline: none;
+  border: none;
+  padding: 0px;
+  padding-left: 10px;
+  color: $black;
+  font-weight: 500;
+}
+
+.searchBtn {
+  background-color: $black;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  height: 100%;
+}

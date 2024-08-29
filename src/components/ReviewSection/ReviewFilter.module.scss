@@ -1,0 +1,23 @@
+@import '../../assets/scss/main';
+
+.reviewFilter {
+  background-color: rgb(154, 208, 254);
+  width: 250px;
+  padding: 20px;
+
+  .MuiLinearProgress-bar1Determinate {
+    background-color: darksalmon;
+  }
+
+  .MuiLinearProgress-bar {
+    background-color: darksalmon;
+  }
+
+  .ratingItem {
+    display: flex;
+  }
+
+  .bar {
+    color: rgb(218, 172, 126);
+  }
+}

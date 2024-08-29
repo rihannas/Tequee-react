@@ -1,0 +1,22 @@
+@mixin tag-border($y, $x, $color) {
+  width: fit-content;
+  border: 1px solid $color;
+  padding: $y $x;
+  border-radius: 15px;
+}
+
+@mixin mini-button {
+  background-color: $minor;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+@mixin button {
+}
+
+@mixin btn-icon {
+  color: $primary-color;
+  font-size: 1rem;
+  font-weight: bolder;
+}

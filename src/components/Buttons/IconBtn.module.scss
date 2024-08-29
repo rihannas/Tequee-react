@@ -1,0 +1,9 @@
+@import '../../assets/scss/main';
+
+.icon {
+  @include btn-icon;
+}
+
+.bm {
+  @include mini-button;
+}

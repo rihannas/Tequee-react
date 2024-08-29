@@ -1,0 +1,49 @@
+@import '../../assets/scss/main';
+
+.serviceDetails {
+  background-color: $white;
+  color: $black;
+
+  .top {
+    display: flex;
+
+    .userInfo {
+      width: 50%;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .profileSnipt {
+        margin-top: 30px;
+        justify-content: center;
+      }
+    }
+
+    .serviceInfo {
+      width: 50%;
+      border: 1px solid black;
+      text-align: left;
+      padding-left: 10px;
+    }
+  }
+
+  .middle {
+    padding-top: 35px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: burlywood;
+  }
+}
+
+.second {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  span {
+    font-size: 0.8rem;
+    margin-right: 15px;
+  }
+}

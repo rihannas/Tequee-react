@@ -1,0 +1,6 @@
+@import '../../assets/scss/main';
+
+.container {
+  @include tag-border(0.5em, 1em, $dark-minor);
+  font-size: 0.7rem;
+}

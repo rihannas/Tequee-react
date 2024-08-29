@@ -1,0 +1,33 @@
+@import '../../assets/scss/main';
+
+.packageContainer {
+  .price {
+    font-size: 1rem;
+    font-weight: 600;
+    .value {
+      margin-left: 5px;
+      font-weight: 700;
+    }
+  }
+
+  .header {
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .desc {
+    margin-top: 0px;
+  }
+}
+
+.packageBtnContainer {
+  .packageBtn {
+    min-width: fit-content;
+    background-color: $minor;
+    color: $black;
+    padding: 4px 10px;
+    border: 1px solid;
+    margin-right: 10px;
+  }
+}
