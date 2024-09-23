@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import IconBtn from '../Buttons/IconBtn.jsx';
 import Button from '../Buttons/Button.jsx';
 import ProfileDisplay from '../ProfileDisplay/ProfileDisplay.jsx';
@@ -7,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 
-const Service = () => {
+const Service = ({ props }) => {
   const name = 'hello';
   return (
     <div className={styles.container}>
@@ -30,14 +31,10 @@ const Service = () => {
         <Tag tag={'Brand'} />
       </div>
       <div className={styles.mid}>
-        <h4>I will revamp your portfolio for job offers</h4>
-        <p>
-          Transform your portfolio into a compelling showcase that attracts job
-          offers. Highlight your skills and experience with a professionally
-          revamped portfolio.
-        </p>
+        <h4>{props.title}</h4>
+        <p>{props.description}</p>
         <div className={styles.price_container}>
-          <div className={styles.price}>$120</div>
+          <div className={styles.price}>{props.price}</div>
           <div className={styles.state}>hourly</div>
         </div>
       </div>
