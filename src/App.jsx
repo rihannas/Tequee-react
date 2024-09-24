@@ -1,18 +1,33 @@
-import { useQuery } from '@tanstack/react-query';
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Nav/Navbar';
-
-import Service from './components/Service/Service';
+import ServicePage from './pages/ServicePage/ServicePage';
+import SellerPage from './pages/SellerPage/SellerPage';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 
 function App() {
-  const {} = useQuery({ queryKey: ['services'], queryFn: });
   return (
-    <>
+    <Router>
       <Navbar />
-      <Service />
-      <ServiceDetails />
-    </>
+      <Routes>
+        <Route
+          path='/'
+          element={
+            <>
+              <ServicePage />
+            </>
+          }
+        />
+        <Route
+          path='/service/:id'
+          element={<ServiceDetails />}
+        />
+        <Route
+          path='/seller/:id'
+          element={<SellerPage />}
+        />
+      </Routes>
+    </Router>
   );
 }
 
