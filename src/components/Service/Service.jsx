@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link, useNavigate } from 'react-router-dom';
 import IconBtn from '../Buttons/IconBtn.jsx';
 import Button from '../Buttons/Button.jsx';
 import ProfileDisplay from '../ProfileDisplay/ProfileDisplay.jsx';
@@ -9,22 +10,28 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 
 const Service = ({ props }) => {
-  const name = 'hello';
+  const sellerId = props.seller.split('/').filter(Boolean).pop();
+  const navigate = useNavigate();
+
   return (
     <div className={styles.container}>
-      <div className={styles.top}>
-        <ProfileDisplay />
-        <div className={styles.user_info}>
-          <h4>{name}</h4>
-          <p>
-            <FontAwesomeIcon
-              icon={faStar}
-              className={styles.star_icon}
-            />
-            <span className={styles.rating}>3.5</span>
-          </p>
+      <Link to={`/seller/${sellerId}`}>
+        <div className={styles.top}>
+          <ProfileDisplay />
+          <div className={styles.user_info}>
+            <h4>{props.seller_info.username}</h4>
+            <p>
+              <FontAwesomeIcon
+                icon={faStar}
+                className={styles.star_icon}
+              />
+              <span className={styles.rating}>
+                {props.seller_info.average_rating}
+              </span>
+            </p>
+          </div>
         </div>
-      </div>
+      </Link>
       <div className={styles.tag_container}>
         <Tag tag={'Design'} />
         <Tag tag={'Web Design'} />
@@ -40,7 +47,14 @@ const Service = ({ props }) => {
       </div>
       <div className={styles.bottom}>
         <IconBtn icon={faBookmark} />
-        <Button text={'Details'} />
+        <Button
+          text={'Details'}
+          onClick={(e) => {
+            e.stopPropagation();
+            console.log('Button clicked', props.id);
+            navigate(`/service/${props.id}`);
+          }}
+        />
       </div>
     </div>
   );
