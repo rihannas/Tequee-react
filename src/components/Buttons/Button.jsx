@@ -8,11 +8,12 @@ import styles from './Button.module.scss';
 
 import Button from '@mui/material/Button';
 
-function ButtonUsage({ className, text }) {
+function ButtonUsage({ className, text, onClick }) {
   return (
     <Button
       variant='contained'
       className={`${styles.btn} ${className}`}
+      onClick={onClick}
     >
       {text}
     </Button>
