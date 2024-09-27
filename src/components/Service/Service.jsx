@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
+import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import IconBtn from '../Buttons/IconBtn.jsx';
-import Button from '../Buttons/Button.jsx';
+import ButtonUsage from '../Buttons/Button.jsx';
 import ProfileDisplay from '../ProfileDisplay/ProfileDisplay.jsx';
 import Tag from '../Tag/Tag.jsx';
 import styles from './Service.module.scss';
@@ -12,6 +13,17 @@ import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 const Service = ({ props }) => {
   const sellerId = props.seller.split('/').filter(Boolean).pop();
   const navigate = useNavigate();
+
+  const handleDetailsClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Button clicked', props.id);
+    navigate(`/service/${props.id}`);
+  };
+
+  useEffect(() => {
+    console.log('Service component rendered with props:', props);
+  }, [props]);
 
   return (
     <div className={styles.container}>
@@ -47,13 +59,9 @@ const Service = ({ props }) => {
       </div>
       <div className={styles.bottom}>
         <IconBtn icon={faBookmark} />
-        <Button
+        <ButtonUsage
           text={'Details'}
-          onClick={(e) => {
-            e.stopPropagation();
-            console.log('Button clicked', props.id);
-            navigate(`/service/${props.id}`);
-          }}
+          onClick={handleDetailsClick}
         />
       </div>
     </div>
