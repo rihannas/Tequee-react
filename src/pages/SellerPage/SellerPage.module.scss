@@ -1,0 +1,45 @@
+@import '../../assets/scss/main';
+
+.sellerpage_container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .top {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    height: 200px;
+
+    .left {
+      @include container(70%, inherit, $black);
+    }
+
+    .right {
+      @include container(30%, inherit, $black);
+      margin-left: 10px;
+      padding-left: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      h4 {
+        margin: 0px;
+      }
+
+      ul {
+        margin-top: 25px;
+        list-style-type: none;
+        padding: 0px;
+        li {
+          text-align: left;
+          .icon {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
