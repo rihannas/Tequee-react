@@ -1,11 +1,7 @@
 import Button from '../Buttons/Button';
 import ProfileDisplay from '../ProfileDisplay/ProfileDisplay';
-import Tag from '../Tag/Tag';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faLocation,
-  faLocationArrow,
-  faLocationCrosshairs,
   faLocationDot,
   faStar,
   faSuitcase,
