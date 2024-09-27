@@ -20,3 +20,28 @@
   font-size: 1rem;
   font-weight: bolder;
 }
+
+@mixin followBtn {
+  .button {
+    display: flex;
+    width: 35%;
+    align-items: center;
+    .followBtn {
+      width: 100%;
+      font-size: 12px;
+      padding: 4px 5px;
+      border-radius: 3px;
+    }
+  }
+}
+
+@mixin container($y, $x, $color) {
+  background-color: $white;
+  color: $color;
+  width: $y;
+  height: $x;
+  padding: 15px;
+  padding-top: 20px;
+
+  border-radius: 10px;
+}
