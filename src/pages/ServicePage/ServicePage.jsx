@@ -1,12 +1,9 @@
 import Service from '../../components/Service/Service';
-import useFetchData from '../../hooks/useFetchData';
+import useServicesQuery from '../../hooks/useServicesQuery';
 import styles from './ServicePage.module.scss';
 
 const ServicePage = () => {
-  const { data, error, isLoading } = useFetchData(
-    'services',
-    'http://127.0.0.1:8000/api/services/'
-  );
+  const { data, error, isLoading } = useServicesQuery();
 
   // Handle loading state
   if (isLoading) {
