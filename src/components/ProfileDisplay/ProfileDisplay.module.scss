@@ -1,10 +1,14 @@
+@import '../../assets/scss/main';
+
 .img_container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: fit-content;
+  height: fit-content;
 }
 
 .dp {
-  width: 40px;
+  @include profile-display-size(40px);
   border-radius: 50%;
 }
