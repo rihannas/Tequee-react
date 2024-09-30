@@ -12,6 +12,24 @@
   padding: 8px 12px;
 }
 
+@mixin round-button($width, $bg, $color, $border) {
+  width: $width;
+  height: fit-content;
+  border-radius: 50px;
+  background-color: $bg;
+  font-weight: 500;
+  color: $color;
+  border: $border solid $primary-color;
+}
+
+// TODO
+@mixin rectangle-button {
+}
+
+@mixin profile-display-size($y) {
+  width: $y;
+}
+
 @mixin button {
 }
 
@@ -21,19 +39,19 @@
   font-weight: bolder;
 }
 
-@mixin followBtn {
-  .button {
-    display: flex;
-    width: 35%;
-    align-items: center;
-    .followBtn {
-      width: 100%;
-      font-size: 12px;
-      padding: 4px 5px;
-      border-radius: 3px;
-    }
-  }
-}
+// @mixin followBtn {
+//   .button {
+//     display: flex;
+//     width: 35%;
+//     align-items: center;
+//     .followBtn {
+//       width: 100%;
+//       font-size: 12px;
+//       padding: 4px 5px;
+//       border-radius: 3px;
+//     }
+//   }
+// }
 
 @mixin container($y, $x, $color) {
   background-color: $white;
