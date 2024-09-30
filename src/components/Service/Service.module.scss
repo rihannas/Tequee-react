@@ -1,7 +1,10 @@
 @import '../../assets/scss/main';
 
 .container {
-  @include container(250px, 360px, $black);
+  @include container(295px, auto, $black);
+  display: flex;
+  flex-direction: column;
+  height: 360px; // Set a fixed height
 }
 
 .top {
@@ -19,25 +22,19 @@
   justify-content: center;
   align-items: start;
   margin: 0px;
-
   h4 {
     font-size: 1rem;
     padding: 0px;
     margin: 0px;
     font-weight: 500;
   }
-
   p {
-    & {
-      padding: 0px;
-      margin: 0px;
-    }
-
+    padding: 0px;
+    margin: 0px;
     .star_icon {
       font-size: 0.7rem;
       color: $dark-minor;
     }
-
     .rating {
       margin-left: 2px;
       font-size: 0.7rem;
@@ -56,18 +53,32 @@
 }
 
 .mid {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; // Allow this section to grow
   h4 {
     font-size: 1rem;
     text-align: left;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2; // Allow up to 2 lines
+    line-height: 1.5em;
+    height: 3em; // Fixed height for 2 lines
   }
-
   p {
     font-size: 0.8rem;
     text-align: left;
     margin-bottom: 18px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    line-height: 1.5em;
   }
-
   .price_container {
     background-color: $minor;
     height: 55px;
@@ -76,8 +87,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: auto; // Push to bottom of .mid
   }
-
   .price {
     font-weight: 700;
   }
