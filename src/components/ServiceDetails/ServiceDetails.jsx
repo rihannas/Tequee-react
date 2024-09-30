@@ -1,6 +1,6 @@
 import ProfileSnipt from '../Profile/ProfileSnipt';
 import ServiceRatings from '../ServiceRatings/ServiceRatings';
-import Button from '../Buttons/Button';
+import ButtonUsage from '../Buttons/ButtonUsage';
 
 import Thumbnail from '../Thumbnail/Thumbnail';
 import styles from './ServiceDetails.module.scss';
@@ -36,7 +36,7 @@ const ServiceDetails = ({ service }) => {
           <p className={styles.desc}>{service.description}</p>
           <h3 className={styles.header}>Duration</h3>
           <p>Flexible, depending on project scope and requirements.</p>
-          <Button text={'Order'} />
+          <ButtonUsage text={'Order'} />
         </div>
       </div>
 

@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import IconBtn from '../Buttons/IconBtn.jsx';
-import ButtonUsage from '../Buttons/Button.jsx';
+import ButtonUsage from '../Buttons/ButtonUsage.jsx';
 import ProfileDisplay from '../ProfileDisplay/ProfileDisplay.jsx';
 import Tag from '../Tag/Tag.jsx';
 import styles from './Service.module.scss';

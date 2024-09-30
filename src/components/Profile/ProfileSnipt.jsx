@@ -1,4 +1,4 @@
-import Button from '../Buttons/Button';
+import ButtonUsage from '../Buttons/ButtonUsage';
 import ProfileDisplay from '../ProfileDisplay/ProfileDisplay';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -17,7 +17,7 @@ function profileSnipt({ className }) {
           <span className={styles.username}>Ian</span>
         </div>
         <div className={styles.button}>
-          <Button
+          <ButtonUsage
             text={'Follow'}
             className={styles.followBtn}
           />
