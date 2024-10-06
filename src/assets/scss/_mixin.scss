@@ -63,3 +63,10 @@
 
   border-radius: 10px;
 }
+
+@mixin thumbnailsize($x) {
+  width: $x;
+}
+
+@mixin profile_page() {
+}

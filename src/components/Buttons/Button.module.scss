@@ -1,12 +1,13 @@
 @import '../../assets/scss/main';
 
+// TODOCHECK
 .btn {
   background-color: $primary-color;
-  border: none;
-  width: 80%;
+  border: 8px solid red;
+  width: 80%; //variable
   min-width: fit-content;
   font-size: 0.9rem;
-  border-radius: 5px;
-  padding: 10px 12px;
+  border-radius: 5px; // no change???
+  padding: 10px 12px; //no changes????
   font-weight: 500;
 }
