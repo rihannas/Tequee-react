@@ -1,0 +1,46 @@
+@import '../../assets/scss/main';
+
+.container {
+  @include container(250px, 360px, $black);
+}
+
+.mid {
+  h4 {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.8rem;
+    text-align: left;
+    margin-bottom: 18px;
+  }
+
+  .price_container {
+    background-color: $minor;
+    height: 55px;
+    border-radius: 6px;
+    padding: 2px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price {
+    font-weight: 700;
+  }
+}
+
+.bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.state {
+  @include tag-border(0.5em, 1em, $black);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: $primary-color;
+}
