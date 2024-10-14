@@ -1,0 +1,156 @@
+@import '../../assets/scss/main';
+
+.productReviews {
+  background-color: $white;
+  color: $black;
+  padding-top: 30px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 1.5rem;
+}
+
+.reviewsContainer {
+  display: flex;
+
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.filters {
+  color: $black;
+  width: 25%;
+  padding-right: 1rem;
+
+  height: fit-content;
+}
+
+.filterTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.filterButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: $black;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  text-align: left;
+  background-color: $minor;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #e5e7eb;
+  }
+
+  &.active {
+    background-color: #dbeafe;
+    color: #2563eb;
+  }
+}
+
+.starRating {
+  display: flex;
+  align-items: center;
+}
+
+.starIcon {
+  margin-left: 0.25rem;
+  fill: #ffc107;
+  stroke: #ffc107;
+}
+
+.reviewCount {
+  font-size: 0.875rem;
+  color: #454545;
+}
+
+.clearFilter {
+  color: #2563eb;
+  margin-top: 0.5rem;
+  background: none;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.reviewsList {
+  width: 70%;
+}
+
+.totalReviews {
+  margin-bottom: 1rem;
+}
+
+.reviewItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reviewItem {
+  border-bottom: 1px solid $dark-minor;
+  padding-bottom: 1.5rem;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  color: #9ca3af;
+}
+
+.username {
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.rating {
+  display: flex;
+}
+
+.star {
+  fill: none;
+  stroke: #ccc;
+
+  &.filled {
+    fill: #ffc107;
+    stroke: #ffc107;
+  }
+}
+
+.reviewText {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.reviewPhotos {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.reviewPhoto {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
