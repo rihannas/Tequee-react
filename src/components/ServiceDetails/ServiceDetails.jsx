@@ -4,7 +4,6 @@ import ButtonUsage from '../Buttons/ButtonUsage';
 
 import Thumbnail from '../Thumbnail/Thumbnail';
 import styles from './ServiceDetails.module.scss';
-import ReviewSection from '../ReviewSection/ReviewSection';
 
 // eslint-disable-next-line react/prop-types
 const ServiceDetails = ({ service }) => {
@@ -30,18 +29,22 @@ const ServiceDetails = ({ service }) => {
           {/* so props must be sent here too?? */}
           <h3 className={styles.price}>
             Price
-            <span className={styles.value}>$40</span>
+            <span className={styles.value}> $40</span>
           </h3>
           <h3 className={styles.header}>Description</h3>
           <p className={styles.desc}>{service.description}</p>
           <h3 className={styles.header}>Duration</h3>
-          <p>Flexible, depending on project scope and requirements.</p>
-          <ButtonUsage text={'Order'} />
-        </div>
-      </div>
+          <p className={styles.duration}>
+            Flexible, depending on project scope and requirements.
+          </p>
 
-      <div>
-        <ReviewSection />
+          <div className={styles.btn_container}>
+            <ButtonUsage
+              text={'Order'}
+              className={styles.btn}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

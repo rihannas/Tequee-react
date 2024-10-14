@@ -1,6 +1,7 @@
 import ServiceDetails from '../../components/ServiceDetails/ServiceDetails';
 import { useParams } from 'react-router-dom';
 import useServicesQuery from '../../hooks/useServicesQuery';
+import ReviewService from '../../components/ReviewSection/ReviewService';
 
 function ServiceDetailPage() {
   const { id } = useParams();
@@ -14,6 +15,7 @@ function ServiceDetailPage() {
   return (
     <div>
       <ServiceDetails service={data} />
+      <ReviewService />
     </div>
   );
 }
